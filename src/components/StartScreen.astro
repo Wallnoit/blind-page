@@ -1,32 +1,59 @@
 <section
-  class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden text-white"
+  class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden text-white
+  "
   data-header-color="white"
-    data-header-active="true"
+  data-header-active="true"
+  data-header-background="black"
 >
   <div class="z-30 relative h-full flex flex-col justify-center">
     <header>
-      <h2
-        class="text-9xl font-medium flex flex-row justify-center drop-shadow-xl shadow-white "
+      <h2 id="Name"
+        class="text-9xl font-medium flex flex-row justify-center drop-shadow-xl shadow-white cursor-default  "
       >Blind
       </h2>
+      
     </header>
   </div>
 
   <div
-    class="absolute flex flex-row top-0 bottom-0 h-full w-full z-10 brightness-50"
-  >
+    class="absolute block lg:flex lg:flex-row top-0 bottom-0 h-full w-full z-10 brightness-50"
+|  >
     <video
-      class="object-cover basis-1/2 brightness-50"
+      class="object-cover basis-1 lg:basis-1/2 brightness-50 h-full w-full"
       autoplay
       muted
       loop
       src="/video.webm"></video>
 
     <video
-      class="object-cover basis-1/2 brightness-50"
+      class="hidden object-cover basis-1/2 brightness-50 lg:block h-full w-full"
       autoplay
       muted
       loop
       src="/video.webm"></video>
   </div>
 </section>
+<script>
+  const options = {
+    root: null, // El valor nulo significa que el área de observación es el viewport
+    threshold: 0.5, // Define la cantidad de intersección necesaria para disparar la animación
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('animate-fade-up','animate-duration-1000');
+        
+      }else{
+        entry.target.classList.remove('animate-fade-up');
+      }
+    });
+  }, options);
+
+  const miComponente = document.getElementById('Name');
+  if (miComponente) {
+    observer.observe(miComponente);
+  }
+</script>
+

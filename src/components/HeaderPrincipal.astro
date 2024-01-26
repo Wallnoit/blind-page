@@ -1,39 +1,65 @@
 <header
   id = "landing-header"
-  class="py-4 px-10 flex items-center fixed top-0 w-full  z-40 text-current  transition-colors duration-500"
+  class="py-4 px-10 sm:flex sm:flex-row block items-center fixed top-0 w-full  z-40 text-current  transition-colors duration-500"
 >
-  <div class="flex flex-grow justify-start text-4xl basis-1/3 ">
-    <a href="#">Blind</a>
 
+<div class="flex flex-grow ">
+  <div class="flex flex-grow justify-start text-4xl    ">
+    <p  class="cursor-default">Blind</p>
   </div>
 
-  <div class="block sm:hidden">
-    <button id='boton' class="flex items-center px-3 py-2  rounded  hover:text-white hover:border-white">
+  <div class="inline sm:hidden ">
+    <button id='boton' class="flex items-center px-3 py-2  rounded ">
       <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
     </button>
   </div>
+</div>
 
-  <nav class="hidden  sm:block " id="menu">
-    <div class=" sm:bg-transparent w-full">
-        <ul class="flex flex-grow justify-center text-xl [&>li>a]:inline-block [&>li>a]:px-6 [&>li>a]:py-2 basis-2/3 ">
-            <li><a  href="#">Inicio</a></li>
-            <li><a  href="#">Fotos</a></li>
-            <li><a href="#">Musica</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-
-    </div>
-  </nav>
-
-
+    <nav class="hidden  sm:block  sm:py-0" id="menu">
+      <div class=" sm:bg-transparent w-full ">
+          <ul class="flex flex-col sm:flex-row items-center text-xl [&>li>a]:inline-block [&>li>a]:px-6 [&>li>a]:py-2 basis-2/3 ">
+              <li><a href="#startScreen" >Inicio</a></li>
+              <li><a  href="#photos">Fotos</a></li>
+              <li><a href="#">Musica</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+  
+      </div>
+    </nav>
 
 
 </header>
 
 <script>
+
+  var backgroundColor : string;
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("#menu a");
+    links.forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        menu.classList.add("hidden");
+        headerElement.style.backgroundColor = 'transparent';
+
+        scrollToSection(this.getAttribute("href"));
+      });
+    });
+  });
+
+function scrollToSection(sectionId: string) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   const headerElement = document.querySelector("#landing-header") as HTMLElement;
 
   const buttonElement = document.querySelector("#boton") as HTMLElement;
+
+  const menu = document.querySelector("#menu") as HTMLElement;
 
   const observerOptions = {
     root: null,
@@ -47,6 +73,12 @@
       if (entry.isIntersecting) {
         const color = entry.target.getAttribute("data-header-color");
         headerElement.style.color = color;
+        backgroundColor = entry.target.getAttribute("data-header-background");
+        
+        menu.classList.add("hidden");
+        headerElement.style.backgroundColor = 'transparent';
+
+        
       }
     });
   }, observerOptions);
@@ -58,7 +90,19 @@
   });
 
     buttonElement.addEventListener("click", () => {
-        const menu = document.querySelector("#menu") as HTMLElement;
         menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+        menu.classList.toggle("flex-toggle");
+        menu.classList.toggle("justify-end");
+        elegirColor();
+
     });
+
+    function elegirColor(){
+      headerElement.style.backgroundColor == backgroundColor ? 
+      headerElement.style.backgroundColor = "transparent" : headerElement.style.backgroundColor = backgroundColor;
+    }
+
+  
+ 
 </script>

@@ -1,4 +1,5 @@
 ---
+import FotosScreen from '../components/FotosScreen.astro';
 import HeaderPrincipal from '../components/HeaderPrincipal.astro';
 import StartScreen from '../components/StartScreen.astro';
 import Layout from '../layouts/Layout.astro';
@@ -7,17 +8,21 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Welcome to Astro.">
 
 	<HeaderPrincipal />
-
-
+	
+	
 	<main class=" snap-y snap-mandatory relative w-screen h-screen overflow-y-auto overflow-x-hidden ">
+		
+		
+		<div class="snap-center" id="startScreen">
+				
+			<StartScreen />
+		</div>
+		
+		<div class="snap-center" id="photos">
+			<FotosScreen />
+			
+		</div>
 
-	<div class="snap-center">
-		<StartScreen />
-	</div>
-
-	<div class="snap-center">
-		<StartScreen />
-	</div>
 	
 	</main>
 
