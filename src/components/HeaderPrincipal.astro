@@ -3,9 +3,9 @@
   class="py-4 px-10 sm:flex sm:flex-row block items-center fixed top-0 w-full  z-40 text-current  transition-colors duration-500"
 >
 
-<div class="flex flex-grow ">
-  <div class="flex flex-grow justify-start text-4xl    ">
-    <p  class="cursor-default">Blind</p>
+<div class="flex flex-grow " >
+  <div class="flex flex-grow justify-start text-4xl" >
+    <p  class="cursor-default" id="logo"><a href="#startScreen" >Blind</a></p>
   </div>
 
   <div class="inline sm:hidden ">
@@ -18,10 +18,10 @@
     <nav class="hidden  sm:block  sm:py-0" id="menu">
       <div class=" sm:bg-transparent w-full ">
           <ul class="flex flex-col sm:flex-row items-center text-xl [&>li>a]:inline-block [&>li>a]:px-6 [&>li>a]:py-2 basis-2/3 ">
-              <li><a href="#startScreen" >Inicio</a></li>
-              <li><a  href="#photos">Fotos</a></li>
-              <li><a href="#">Musica</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="#noticias" >Noticias</a></li>
+              <li><a  href="#musica">Musica</a></li>
+              <li><a href="#estrenos">Estrenos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
             </ul>
   
       </div>
@@ -44,8 +44,22 @@ document.addEventListener("DOMContentLoaded", function() {
         headerElement.style.backgroundColor = 'transparent';
 
         scrollToSection(this.getAttribute("href"));
+
+
       });
     });
+
+    const logo = document.querySelector("#logo a");
+
+    logo.addEventListener("click", function(event) {
+      event.preventDefault();
+      menu.classList.add("hidden");
+      headerElement.style.backgroundColor = 'transparent';
+
+      scrollToSection(this.getAttribute("href"));
+
+    });
+
   });
 
 function scrollToSection(sectionId: string) {

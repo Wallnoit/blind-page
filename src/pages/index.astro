@@ -3,9 +3,13 @@ import FotosScreen from '../components/FotosScreen.astro';
 import HeaderPrincipal from '../components/HeaderPrincipal.astro';
 import StartScreen from '../components/StartScreen.astro';
 import Layout from '../layouts/Layout.astro';
+import NoticiasScreen from '../components/NoticiasScreen.astro';
+import MusicaScreen from '../components/MusicaScreen.astro';
+import EstrenosScreen from '../components/EstrenosScreen.astro';
+import ContactoScreen from '../components/ContactoScreen.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Blind">
 
 	<HeaderPrincipal />
 	
@@ -18,10 +22,24 @@ import Layout from '../layouts/Layout.astro';
 			<StartScreen />
 		</div>
 		
-		<div class="snap-center" id="photos">
-			<FotosScreen />
+		<div class="snap-center" id="noticias">
+			<NoticiasScreen />
 			
+		</div >
+
+		<div class="snap-center" id="musica">
+			<MusicaScreen/>	
+		</div >
+
+		<div class="snap-center" id="estrenos" >
+			<EstrenosScreen />
 		</div>
+
+		<div class="snap-center" id="contacto">
+			<ContactoScreen/>
+		</div>
+
+
 
 	
 	</main>
