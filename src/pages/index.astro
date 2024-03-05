@@ -1,5 +1,4 @@
 ---
-import FotosScreen from '../components/FotosScreen.astro';
 import HeaderPrincipal from '../components/HeaderPrincipal.astro';
 import StartScreen from '../components/StartScreen.astro';
 import Layout from '../layouts/Layout.astro';
@@ -17,23 +16,22 @@ import ContactoScreen from '../components/ContactoScreen.astro';
 	<main class=" snap-y snap-mandatory relative w-screen h-screen overflow-y-auto overflow-x-hidden ">
 		
 		
-		<div class="snap-center" id="startScreen">
-				
+		<div class="snap-center" id="startScreen">		
 			<StartScreen />
 		</div>
 		
 		<div class="snap-center" id="noticias">
 			<NoticiasScreen />
-			
 		</div >
+		
+		<div class="snap-center" id="estrenos" >
+			<EstrenosScreen />
+		</div>
 
 		<div class="snap-center" id="musica">
 			<MusicaScreen/>	
 		</div >
 
-		<div class="snap-center" id="estrenos" >
-			<EstrenosScreen />
-		</div>
 
 		<div class="snap-center" id="contacto">
 			<ContactoScreen/>
