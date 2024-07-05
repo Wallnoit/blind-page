@@ -1,10 +1,17 @@
 ---
 import 'flowbite';
+import Titulo from './TituloSeccion.astro';
 ---
-<section class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden "
-data-header-color="white"
+<section class="landing-section bg-white h-screen w-screen text-center relative overflow-hidden "
+data-header-color="black"
 data-header-active="true"
-data-header-background="black"
+data-header-background="white"
 >
+
+    <div class="container mx-auto flex flex-col justify-center items-center h-full">
+        <div class="w-full md:w-1/2">
+        <Titulo title="¿Qué es Flowbite?" color="text-white" />
+        <p class="text-white text-lg">
+            Flowbite es un framework de diseño web moderno y minimalista que te permite crear sitios web de forma rápida y sencilla. Está construido con Tailwind CSS y Alpine.js, dos de las herramientas más populares en el mundo del desarrollo web.
  
 </section>
