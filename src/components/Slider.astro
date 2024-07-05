@@ -1,26 +1,36 @@
 ---
-import 'flowbite';
+
 import CardNoticia from './CardNoticia.astro';
+import noticia1 from '../../public/noticia1.jpg';
+import noticia2 from '../../public/noticia2.jpg';
+import noticia3 from '../../public/noticia3.jpg';
+import noticia4 from '../../public/noticia4.jpg';
 import localImage from '../../public/blindFoto1.svg'
 
 ---
 
 <div class="flex flex-col justify-center h-full   overflow-hidden   ">
 
-<div id="indicators-carousel" class=" w-full h-full  " data-carousel="slide">
+<div id="indicators-carousel" class=" w-full h-full " data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="w-screen h-screen overflow-hidden rounded-lg   ">
          <!-- Item 1 -->
         <div class="duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item="active">
             
-               <CardNoticia title="Concierto 10 de mayo" description="El concierto se dará a cabo el dia 10 de mayo a las 9 de la noche patrocinado por bl abla ba" image={localImage} ></CardNoticia>
+               <CardNoticia 
+               title="Lorem ipsum dolor sit amet" 
+               description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
+               image={localImage} ></CardNoticia>
             
         </div>
         <!-- Item 2 -->
-        <div class=" duration-700 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
+        <div class=" duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
             
                 <!-- <CardNoticia></CardNoticia> -->
-               <CardNoticia title="Concierto 10 de mayo" description="El concierto se dará a cabo el dia 10 de mayo a las 9 de la noche patrocinado por bl abla ba" image={localImage} ></CardNoticia>
+               <CardNoticia 
+               title="Lorem ipsum dolor sit amet" 
+               description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
+               image={noticia1} ></CardNoticia>
 
             
         </div>
@@ -28,7 +38,10 @@ import localImage from '../../public/blindFoto1.svg'
         <div class=" duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
             
                 <!-- <CardNoticia></CardNoticia> -->
-               <CardNoticia title="Concierto 10 de mayo" description="El concierto se dará a cabo el dia 10 de mayo a las 9 de la noche patrocinado por bl abla ba" image={localImage} ></CardNoticia>
+               <CardNoticia 
+               title="Lorem ipsum dolor sit amet" 
+               description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
+               image={noticia2} ></CardNoticia>
 
              
         </div>
@@ -36,14 +49,20 @@ import localImage from '../../public/blindFoto1.svg'
         <div class="duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
             
                 <!-- <CardNoticia></CardNoticia> -->
-                <CardNoticia title="Concierto 10 de mayo" description="El concierto se dará a cabo el dia 10 de mayo a las 9 de la noche patrocinado por bl abla ba" image={localImage} ></CardNoticia>
+                <CardNoticia 
+                title="Lorem ipsum dolor sit amet" 
+                description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
+                image={noticia3} ></CardNoticia>
             
         </div>
         <!-- Item 5 -->
         <div class="duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
             
                 <!-- <CardNoticia></CardNoticia> -->
-               <CardNoticia title="Concierto 10 de mayo" description="El concierto se dará a cabo el dia 10 de mayo a las 9 de la noche patrocinado por bl abla ba" image={localImage} ></CardNoticia>
+               <CardNoticia 
+               title="Lorem ipsum dolor sit amet" 
+               description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" 
+               image={noticia4} ></CardNoticia>
 
             
         </div>
@@ -59,16 +78,16 @@ import localImage from '../../public/blindFoto1.svg'
 
 
     <button type="button" class="absolute mx-1 top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/70  group-hover:bg-gray-100  group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-500 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/70  group-hover:bg-gray-100  group-focus:ring-4 group-focus:ring-black  group-focus:outline-none">
+            <svg class="w-4 h-4 text-gray-500  rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
             </svg>
             <span class="sr-only">Previous</span>
         </span>
     </button>
     <button type="button" class="absolute mx-1 top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/70  group-hover:bg-gray-100  group-focus:ring-4 group-focus:ring-black  group-focus:outline-none">
+            <svg class="w-4 h-4 text-gray-500 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
             </svg>
             <span class="sr-only">Next</span>
