@@ -6,29 +6,30 @@ import noticia2 from '../../public/noticia2.jpg';
 import noticia3 from '../../public/noticia3.jpg';
 import noticia4 from '../../public/noticia4.jpg';
 import localImage from '../../public/blindFoto1.svg'
+import BigCardNoticia from './BigCardNoticia.astro';
 
 ---
 
-<div id="indicators-carousel" class=" relative w-full" data-carousel="static">
+<div id="indicators-carousel" class=" relative w-full bg-slate-700 " data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="w-screen h-80 overflow-hidden rounded-lg   ">
+    <div class="w-screen h-96 overflow-hidden rounded-lg   ">
          <!-- Item 1 --> 
         <div class="duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item="active">
             
-               <CardNoticia 
+               <BigCardNoticia 
                title="Lorem ipsum dolor sit amet" 
                description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
-               image={localImage} ></CardNoticia>
+               image={localImage} ></BigCardNoticia>
             
         </div>
         <!-- Item 2 -->
         <div class=" duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
             
                 <!-- <CardNoticia></CardNoticia> -->
-               <CardNoticia 
+               <BigCardNoticia 
                title="Lorem ipsum dolor sit amet" 
                description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
-               image={noticia1} ></CardNoticia>
+               image={noticia1} ></BigCardNoticia>
 
             
         </div>
@@ -36,10 +37,10 @@ import localImage from '../../public/blindFoto1.svg'
         <div class=" duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
             
                 <!-- <CardNoticia></CardNoticia> -->
-               <CardNoticia 
+               <BigCardNoticia 
                title="Lorem ipsum dolor sit amet" 
                description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
-               image={noticia2} ></CardNoticia>
+               image={noticia2} ></BigCardNoticia>
 
              
         </div>
@@ -47,20 +48,20 @@ import localImage from '../../public/blindFoto1.svg'
         <div class="duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
             
                 <!-- <CardNoticia></CardNoticia> -->
-                <CardNoticia 
+                <BigCardNoticia 
                 title="Lorem ipsum dolor sit amet" 
                 description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
-                image={noticia3} ></CardNoticia>
+                image={noticia3} ></BigCardNoticia>
             
         </div>
         <!-- Item 5 -->
         <div class="duration-1000 ease-in-out  flex flex-col items-center justify-center" data-carousel-item>
             
                 <!-- <CardNoticia></CardNoticia> -->
-               <CardNoticia 
+               <BigCardNoticia 
                title="Lorem ipsum dolor sit amet" 
                description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" 
-               image={noticia4} ></CardNoticia>
+               image={noticia4} ></BigCardNoticia>
 
             
         </div>
