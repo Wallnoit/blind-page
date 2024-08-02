@@ -1,19 +1,19 @@
 ---
 import HeaderPrincipal from '../components/HeaderPrincipal.astro';
-import StartScreen from '../components/StartScreen.astro';
+import StartScreen from '../sections/StartScreen.astro';
 import Layout from '../layouts/Layout.astro';
-import NoticiasScreen from '../components/NoticiasScreen.astro';
-import MusicaScreen from '../components/MusicaScreen.astro';
-import EstrenosScreen from '../components/EstrenosScreen.astro';
-import ContactoScreen from '../components/ContactoScreen.astro';
+import NoticiasScreen from '../sections/NewsSection.astro';
+import MusicaScreen from '../sections/MusicSection.astro';
+import EstrenosScreen from '../sections/PremiereSection.astro';
+import ContactoScreen from '../sections/ContactSection.astro';
 ---
 
 <Layout title="Blind">
 
-	<HeaderPrincipal />
+	<HeaderPrincipal  />
 	
 	
-	<main class=" snap-y snap-mandatory relative w-screen h-screen overflow-y-auto overflow-x-hidden  ">
+	<main class=" snap-y snap-mandatory relative w-screen h-screen  overflow-x-hidden overflow-y-auto no-scrollbar ">
 		
 		
 		<div class="snap-center " id="startScreen">		
