@@ -15,23 +15,21 @@ import { HeaderIds } from "../enum/header-ids";
     <div
         class="w-screen h-screen flex flex-col xl:flex-row items-center px-0 bg-white overflow-y-scroll xl:overflow-y-hidden"
     >
-        <div
-            class="relative xl:w-1/2 w-screen xl:flex bg-black h-full object-none"
-        >
+        <div class="relative xl:w-1/2 w-screen xl:flex bg-black h-full">
             <Image
                 id="blindNews"
                 src={blindFoto}
                 alt="Blind."
                 width="50"
                 height="10"
-                class="w-full h-full brightness-[0.30]"
+                class="w-full h-full brightness-[0.30] object-cover"
             />
             <div
-                class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-start lg:mt-28 mt-16 items-center m-10"
+                class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center lg:mt-28 mt-16 items-center m-10"
             >
                 <h1 class="text-white lg:text-8xl text-6xl">Blind</h1>
 
-                <p class="text-white lg:text-2xl text-lg lg:mt-28 mt-5">
+                <p class="text-white text-2xl mt-20 hidden lg:block">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -39,6 +37,10 @@ import { HeaderIds } from "../enum/header-ids";
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat non proident
+                </p>
+                <p class="text-white text-lg lg:hidden mt-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
                 </p>
             </div>
         </div>
