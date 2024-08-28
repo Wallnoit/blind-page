@@ -1,42 +1,50 @@
 ---
-
-import { Image } from 'astro:assets';
-import ScrollSection from '../components/ScrollSection';
-import blindFoto from "../assets/blindFoto1.svg"
-
+import { Image } from "astro:assets";
+import ScrollSection from "../components/ScrollSection";
+import blindFoto from "../assets/blindFoto1.svg";
+import { HeaderIds } from "../enum/header-ids";
 ---
-<section class="landing-section h-screen w-screen text-center relative overflow-hidden "
-data-header-color="black"
-data-header-active="true"
-data-header-background="white"
 
+<section
+    class="landing-section h-screen w-screen text-center relative overflow-hidden"
+    data-header-color="black"
+    data-header-active="true"
+    data-header-background="white"
+    data-name-section={HeaderIds.NEWS}
 >
+    <div
+        class="w-screen h-screen flex flex-col xl:flex-row items-center px-0 bg-white overflow-y-scroll xl:overflow-y-hidden"
+    >
+        <div
+            class="relative xl:w-1/2 w-screen xl:flex bg-black h-full object-none"
+        >
+            <Image
+                id="blindNews"
+                src={blindFoto}
+                alt="Blind."
+                width="50"
+                height="10"
+                class="w-full h-full brightness-[0.30]"
+            />
+            <div
+                class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-start lg:mt-28 mt-16 items-center m-10"
+            >
+                <h1 class="text-white lg:text-8xl text-6xl">Blind</h1>
 
-<div class="w-screen h-screen flex flex-col xl:flex-row items-center  px-0 bg-white overflow-y-scroll xl:overflow-y-hidden">
-
-    <div class="relative xl:w-1/2 w-screen  xl:flex   ">
-
-        <Image src={blindFoto} alt="Blind." width="50" height="10" class=' w-full  brightness-[0.30] ' />
-        <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-start lg:mt-28 mt-16 items-center m-10">
-            <h1 class="text-white lg:text-8xl text-6xl">Blind</h1>
-
-           
-                <p class="text-white lg:text-2xl text-lg lg:mt-28  mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-         
+                <p class="text-white lg:text-2xl text-lg lg:mt-28 mt-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident
+                </p>
+            </div>
         </div>
+
+        <ScrollSection client:load />
+
+        <!-- <Slider></Slider> -->
     </div>
-
-    
-        <ScrollSection client:load></ScrollSection>
-
-
-    <!-- <Slider></Slider> -->
-
-</div>
-
-
-
-
-
-
 </section>
