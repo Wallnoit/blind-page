@@ -1,26 +1,29 @@
+---
+import { HeaderIds } from "../enum/header-ids";
+---
 
 <section
-  class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden text-white
-  "
+  class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden text-white"
   data-header-color="white"
   data-header-active="true"
   data-header-background="black"
+  data-name-section={HeaderIds.START}
 >
   <div class="z-30 relative h-full flex flex-col justify-center">
-    
-      <h2 id="Name"
-        class="text-9xl font-medium flex flex-row justify-center drop-shadow-xl shadow-white cursor-default  "
-      >Blind
-      </h2>
-      
-   
+    <h2
+      id="Name"
+      class="text-9xl font-medium flex flex-row justify-center drop-shadow-xl shadow-white cursor-default"
+    >
+      Blind
+    </h2>
   </div>
 
   <div
     class="absolute block lg:flex lg:flex-row top-0 bottom-0 h-full w-full z-10 brightness-50"
-|  >
+    |
+  >
     <video
-      class="object-cover basis-1 lg:basis-1/2 brightness-50 bg-black h-full w-full" 
+      class="object-cover basis-1 lg:basis-1/2 brightness-50 bg-black h-full w-full"
       autoplay
       muted
       loop
@@ -35,7 +38,6 @@
   </div>
 </section>
 
-
 <script>
   const options = {
     root: null, // El valor nulo significa que el área de observación es el viewport
@@ -43,20 +45,22 @@
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-
-        entry.target.classList.add('animate-fade-up','animate-duration-1000');
-        
-      }else{
-        entry.target.classList.remove('animate-fade-up');
+        entry.target.classList.add("animate-fade-up", "animate-duration-1000");
+      } else {
+        entry.target.classList.remove("animate-fade-up");
       }
     });
   }, options);
 
-  const miComponente = document.getElementById('Name');
+  const miComponente = document.getElementById("Name");
+  const miComponente2 = document.getElementById("imagen");
+  const miComponente3 = document.getElementById("blindNews");
+
   if (miComponente) {
     observer.observe(miComponente);
+    observer.observe(miComponente2);
+    observer.observe(miComponente3);
   }
 </script>
-

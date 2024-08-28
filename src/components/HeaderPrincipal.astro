@@ -1,9 +1,14 @@
+
+---
+import { HeaderIds } from "../enum/header-ids"
+---
+
 <header
   id = "landing-header"
-  class="py-4 px-10 sm:flex sm:flex-row block items-center fixed top-0 w-full  z-40 text-current  transition-colors duration-500"
+  class="py-4 px-10 sm:flex sm:flex-row block items-center fixed top-0 w-full  z-40 text-current   duration-500 "
 >
 
-<div class="flex flex-grow " >
+<div class="flex flex-grow  " >
   <div class="flex flex-grow justify-start text-4xl" >
     <p  class="cursor-default" id="logo"><a href="#startScreen" >Blind</a></p>
   </div>
@@ -18,10 +23,10 @@
     <nav class="hidden  sm:block  sm:py-0" id="menu">
       <div class=" sm:bg-transparent w-full ">
           <ul class="flex flex-col sm:flex-row items-center text-xl [&>li>a]:inline-block [&>li>a]:px-6 [&>li>a]:py-2 basis-2/3 ">
-              <li><a href="#noticias" >Noticias</a></li>
-              <li><a href="#estrenos">Estrenos</a></li>
-              <li><a  href="#musica">Musica</a></li>
-              <li><a href="#contacto">Contacto</a></li>
+              <li><a  href="#noticias" id={HeaderIds.NEWS} >Noticias</a></li>
+              <li><a href="#estrenos" id={HeaderIds.PREMIERE}>Estrenos</a></li>
+              <li><a  href="#musica" id={HeaderIds.MUSIC}>Musica</a></li>
+              <li><a  href="#contacto" id={HeaderIds.CONTACT}>Contacto</a></li>
             </ul>
   
       </div>
@@ -31,6 +36,8 @@
 </header>
 
 <script>
+import { HeaderIds } from "../enum/header-ids";
+
 
   var backgroundColor : string;
 
@@ -49,8 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
 
-    const logo = document.querySelector("#logo a");
-
+   
     logo.addEventListener("click", function(event) {
       event.preventDefault();
       menu.classList.add("hidden");
@@ -74,6 +80,27 @@ function scrollToSection(sectionId: string) {
   const buttonElement = document.querySelector("#boton") as HTMLElement;
 
   const menu = document.querySelector("#menu") as HTMLElement;
+  
+  const logo = document.querySelector("#logo a");
+
+
+  
+  const newsOption = document.querySelector(`#${HeaderIds.NEWS}`) as HTMLElement;
+
+  const musicOption = document.querySelector(`#${HeaderIds.MUSIC}`) as HTMLElement;
+
+  const premiereOption = document.querySelector(`#${HeaderIds.PREMIERE}`) as HTMLElement;
+
+  const contactOption = document.querySelector(`#${HeaderIds.CONTACT}`) as HTMLElement;
+
+  const optionElement = {
+   
+    [HeaderIds.NEWS]: newsOption,
+    [HeaderIds.MUSIC]: musicOption,
+    [HeaderIds.PREMIERE]: premiereOption,
+    [HeaderIds.CONTACT]: contactOption
+  }
+
 
   const observerOptions = {
     root: null,
@@ -92,7 +119,20 @@ function scrollToSection(sectionId: string) {
         menu.classList.add("hidden");
         headerElement.style.backgroundColor = 'transparent';
 
+
+        const name = entry.target.getAttribute("data-name-section");
+
+
+        selectNavigationOption(optionElement[name]);
+
+        // giveBackgroundColor(name);
+
         
+        
+
+  
+
+         
       }
     });
   }, observerOptions);
@@ -109,12 +149,41 @@ function scrollToSection(sectionId: string) {
         menu.classList.toggle("flex-toggle");
         menu.classList.toggle("justify-end");
         elegirColor();
+        
 
     });
 
     function elegirColor(){
       headerElement.style.backgroundColor == backgroundColor ? 
       headerElement.style.backgroundColor = "transparent" : headerElement.style.backgroundColor = backgroundColor;
+      console.log(headerElement.style.backgroundColor);
+    }
+
+    function giveBackgroundColor(name: string){
+
+      if(name == HeaderIds.NEWS){
+        headerElement.classList.add("sm:bg-white","rounded-lg", "xl:bg-transparent");
+        logo.classList.add("bg-white","rounded-lg", "px-2", "xl:bg-transparent", "xl:px-0");
+        buttonElement.classList.add("bg-white","rounded-lg", "xl:bg-transparent");     
+      } else {
+        menu.classList.remove("sm:bg-white","rounded-lg");
+        logo.classList.remove("bg-white","rounded-lg", "px-2");
+      }
+      
+     
+    }
+
+    function selectNavigationOption(option: HTMLElement){
+      const options = [newsOption, musicOption, premiereOption, contactOption];
+
+      options.forEach(opt => {
+        
+        if(opt == option){
+          opt.classList.add("underline");
+        }else{
+          opt.classList.remove("underline");
+        }
+      });
     }
 
   
