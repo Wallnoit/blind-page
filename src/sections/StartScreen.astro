@@ -23,18 +23,18 @@ import { HeaderIds } from "../enum/header-ids";
     |
   >
     <video
-      class="object-cover basis-1 lg:basis-1/2 brightness-50 bg-black h-full w-full"
+      class="object-cover basis-1 lg:hidden brightness-50 bg-black h-full w-full"
       autoplay
       muted
       loop
       src="/videoStart.webm"></video>
 
     <video
-      class="hidden object-cover basis-1/2 brightness-50 lg:block h-full w-full bg-black"
+      class="hidden object-cover brightness-50 lg:block h-full w-full bg-black"
       autoplay
       muted
       loop
-      src="/videoStart.webm"></video>
+      src="/videoStart-big.webm"></video>
   </div>
 </section>
 
@@ -57,10 +57,12 @@ import { HeaderIds } from "../enum/header-ids";
   const miComponente = document.getElementById("Name");
   const miComponente2 = document.getElementById("premier-title");
   const miComponente3 = document.getElementById("blindNews");
+  const miComponente4 = document.getElementById("blindMusic");
 
   if (miComponente) {
     observer.observe(miComponente);
     observer.observe(miComponente2);
     observer.observe(miComponente3);
+    observer.observe(miComponente4);
   }
 </script>

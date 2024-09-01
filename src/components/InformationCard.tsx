@@ -32,7 +32,7 @@ export default function InformationCard({ title, date, content, link, video, url
                 rel="noopener noreferrer"
             >
 
-                <h1 className=" text-3xl">{title}</h1>
+                <h1 className=" text-3xl text-gray-800">{title}</h1>
             </a>
             <p className=" text-lg text-gray-500">{content}</p>
 
