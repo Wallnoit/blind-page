@@ -1,10 +1,7 @@
-import noticia1 from "../assets/noticia1.jpg"
-import noticia2 from "../assets/noticia2.jpg"
-import noticia3 from "../assets/noticia3.jpg"
-import noticia4 from "../assets/noticia4.jpg"
-import noticia5 from "../assets/noticia5.png"
+
 import camiseta_1 from "../assets/camiseta_1.mp4"
 import camiseta_2 from "../assets/camiseta_2.mp4"
+import blindNewAlbum from "../assets/blind-promo2.jpg"
 
 
 
@@ -14,68 +11,36 @@ type News = {
     content: string;
     link: string;
     video: boolean;
+    url?: string;
 }
 
 export const newsInformation: News[] = [
 
     {
         title: "Born to Rap Collection 2024",
-        date: "01/01/2021",
+        date: "31/08/2024",
         content: "Nuevo diseños disponibles",
         link: camiseta_1,
-        video: true
+        video: true,
+        url: "https://api.whatsapp.com/send?phone=+593984691332&text=Hola,%20Quiero%20saber%20cuanto%20cuesta%20la%20camiseta%20Born%20to%20rap%20?%F0%9F%91%8C%F0%9F%98%8E"
     },
 
     {
         title: "Ego trip Collection 2024",
-        date: "01/01/2021",
+        date: "31/08/2024",
         content: "Nuevo diseños disponibles",
         link: camiseta_2,
-        video: true
+        video: true,
+        url: "https://api.whatsapp.com/send?phone=+593984691332&text=Hola,%20Quiero%20saber%20cuanto%20cuesta%20la%20camiseta%20Ultra%20Ego%20?%F0%9F%91%8C%F0%9F%98%8E"
     },
     {
-        title: "Lorem ipsum dolor sit amet 1",
+        title: "New Album Dragonfly",
         date: "01/01/2021",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
-        link: noticia1.src,
-        video: false
+        content: "Este álbum se centra la evolución personal y artística del creador, inspirada en la transformación de una libélula. \n\nEl álbum cuenta con 6 canciones y está disponible en todas las plataformas digitales.",
+        link: blindNewAlbum.src,
+        video: false,
+        url: ""
 
     },
-
-    {
-        title: "Lorem ipsum dolor sit amet 2",
-        date: "01/01/2021",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
-        link: noticia2.src,
-        video: false
-
-    },
-
-    {
-        title: "Lorem ipsum dolor sit amet 3",
-        date: "01/01/2021",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
-        link: noticia3.src,
-        video: false
-
-    },
-
-    {
-        title: "Lorem ipsum dolor sit amet 4",
-        date: "01/01/2021",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
-        link: noticia4.src,
-        video: false
-    },
-
-    {
-        title: "Lorem ipsum dolor sit amet 5",
-        date: "01/01/2021",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
-        link: noticia5.src,
-        video: false
-
-    },
-
 
 ]

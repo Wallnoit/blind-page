@@ -1,5 +1,5 @@
 
-export default function InformationCard({ title, date, content, link, video }: { title: string, date: string, content: string, link: string, video: boolean }) {
+export default function InformationCard({ title, date, content, link, video, url }: { title: string, date: string, content: string, link: string, video: boolean, url: string }) {
     return (
         <div className=" flex flex-col items-center gap-4 my-12 ">
 
@@ -12,7 +12,7 @@ export default function InformationCard({ title, date, content, link, video }: {
                         muted
                         loop
                         src={link}
-                        className="max-h-96 object-cover object-center bg-black " />
+                        className="max-h-[28rem] object-cover object-center bg-black " />
 
                     :
 
@@ -27,8 +27,13 @@ export default function InformationCard({ title, date, content, link, video }: {
 
             }
 
+            <a href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
 
-            <h1 className=" text-3xl">{title}</h1>
+                <h1 className=" text-3xl">{title}</h1>
+            </a>
             <p className=" text-lg text-gray-500">{content}</p>
 
 

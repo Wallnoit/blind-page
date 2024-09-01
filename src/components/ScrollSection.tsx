@@ -17,6 +17,14 @@ export default function ScrollSection() {
 
         <div className="flex flex-col items-center m-5 mb-24  ">
 
+        {
+
+news.slice(2, news.length).map((news, i = 2) => (
+    <InformationCard key={i} title={news.title} date={news.date} content={news.content} link={news.link} video={news.video} url={news.url} />
+))
+}
+
+
             <div className="flex md:flex-row flex-col items-center justify-center md:gap-16  w-full ">
 
 
@@ -29,6 +37,7 @@ export default function ScrollSection() {
                             content={item.content}
                             link={item.link}
                             video={item.video}
+                            url={item.url}
                         />
                     ))
                 }
@@ -37,14 +46,7 @@ export default function ScrollSection() {
 
             </div>
 
-            {
-
-                news.slice(2, news.length).map((news, i = 2) => (
-                    console.log(news),
-                    <InformationCard key={i} title={news.title} date={news.date} content={news.content} link={news.link} video={news.video} />
-                ))
-            }
-
+         
 
 
 
