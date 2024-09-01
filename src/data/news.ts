@@ -35,7 +35,7 @@ export const newsInformation: News[] = [
     },
     {
         title: "New Album Dragonfly",
-        date: "01/01/2021",
+        date: "31/08/2024",
         content: "Este álbum se centra la evolución personal y artística del creador, inspirada en la transformación de una libélula. \n\nEl álbum cuenta con 6 canciones y está disponible en todas las plataformas digitales.",
         link: blindNewAlbum.src,
         video: false,
