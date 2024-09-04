@@ -10,7 +10,15 @@ export default function MusicVideoCard({ title, artist, src, linkSpotify, linkYo
 
             <iframe width="560" height="315" src={src} title={title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
-            <h1 className="text-3xl font-bold text-gray-800 mt-2 ">{title}</h1>
+
+            <a
+                href={linkYoutube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-800 hover:text-gray-600">
+                <h1 className="text-3xl font-bold text-gray-800 mt-2 ">{title}</h1>
+
+            </a>
 
             <h2 className="text-xl font-semibold text-gray-600 mt-1 ">{artist}</h2>
 
@@ -27,7 +35,7 @@ export default function MusicVideoCard({ title, artist, src, linkSpotify, linkYo
 
 
                 <a
-                    href="https://music.apple.com/ec/album/dragonfly-ep/1765417540"
+                    href="https://music.apple.com/ec/artist/blind/1649334396"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-800 hover:text-gray-600"

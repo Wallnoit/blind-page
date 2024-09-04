@@ -1,12 +1,74 @@
 ---
-import { HeaderIds } from '../enum/header-ids'
-
+import { HeaderIds } from "../enum/header-ids";
+import { Image } from "astro:assets";
+import blind2 from "../assets/blind2.svg";
+import InfoCard from "../components/info_card";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa";
+import { SiApplemusic } from "react-icons/si";
 ---
-<section class="landing-section bg-black   h-screen w-screen text-center relative overflow-hidden "
-data-header-color="white"
-data-header-active="true"
-data-header-background="black"
-data-name-section={HeaderIds.CONTACT}
+
+<section
+    class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden"
+    data-header-color="white"
+    data-header-active="true"
+    data-header-background="black"
+    data-name-section={HeaderIds.CONTACT}
 >
- 
+    <div
+        class="w-screen h-screen flex flex-col xl:flex-row items-center px-0 bg-black overflow-y-scroll xl:overflow-y-hidden"
+    >
+        <div class="relative xl:w-1/2 w-screen xl:flex bg-black h-full">
+            <Image
+                id="blindContact"
+                src={blind2}
+                alt="Blind."
+                width="50"
+                height="10"
+                class="w-full h-full brightness-[0.30] object-cover"
+            />
+            <div
+                class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center lg:mt-28 mt-16 items-center m-10"
+            >
+                <h1 class="text-white lg:text-9xl text-7xl">Contacto</h1>
+            </div>
+        </div>
+
+        <div
+            class="xl:w-1/2 w-full h-screen xl:mt-32 mt-10 flex flex-col gap-10 justify-center xl:px-10 px-5 pb-10"
+        >
+            <InfoCard name="blind777" link="https://www.youtube.com/@blind777">
+                <FaYoutube size="2.5em" className="text-black" />
+            </InfoCard>
+
+            <InfoCard
+                name="Blind"
+                link="https://open.spotify.com/artist/5gfMFr9fFFirQKjC67BWZq?si=fOO3RhSKSam3WyvhnRVQSg"
+            >
+                <FaSpotify size="2.5em" className="text-black" />
+            </InfoCard>
+
+            <InfoCard
+                name="Blind"
+                link="https://music.apple.com/ec/artist/blind/1649334396"
+            >
+                <SiApplemusic size="2.5em" className="text-black" />
+            </InfoCard>
+            <InfoCard
+                name="Blind"
+                link="https://www.facebook.com/Blind99Slc?locale=es_LA"
+            >
+                <FaFacebook size="2.5em" className="text-black" />
+            </InfoCard>
+
+            <InfoCard
+                name="blindrap593"
+                link="https://www.instagram.com/blindrap593/"
+            >
+                <FaInstagram size="2.5em" className="text-black" />
+            </InfoCard>
+        </div>
+    </div>
 </section>
