@@ -39,7 +39,7 @@ export const newsInformation: News[] = [
         content: "Este álbum se centra la evolución personal y artística del creador, inspirada en la transformación de una libélula. \n\nEl álbum cuenta con 6 canciones y está disponible en todas las plataformas digitales.",
         link: blindNewAlbum.src,
         video: false,
-        url: ""
+        url: "https://open.spotify.com/album/6E2PjzfrAndKdFdDHFAAlj?si=mtJMhUMnQHKM_3b823GqzQ"
 
     },
 
