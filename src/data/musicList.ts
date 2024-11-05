@@ -12,6 +12,15 @@ type musicList = {
 export const musicList: musicList[] = [
 
     {
+        title: "Rolling",
+        artist: "Baxterboy ft Blind",
+        src: "https://www.youtube.com/embed/3a0IT23dZ3s?si=XVzb_8XvPmlQcBBY",
+        linkSpotify: "",
+        linkYoutube: "https://www.youtube.com/watch?v=3a0IT23dZ3s",
+        linkAppleMusic: ""
+    },
+
+    {
         title: "Stylish",
         artist: "Blind",
         src: "https://www.youtube.com/embed/FOzI4PGf6uI?si=U5oYJfwN8w0B6Eb8",
